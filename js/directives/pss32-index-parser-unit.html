@@ -1,0 +1,16 @@
+<div class="form-horizontal" role="form">
+    <div class="form-group">
+        <label class="col-sm-1 control-label">INDEX</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" ng-model="snmpIndex"
+                   placeholder="PSS32 snmp index: (Port, OTU, ODU)">
+        </div>
+<!--        <div class="col-sm-1">
+            <button class="btn btn-success" ng-disabled="!valid()" ng-click="onParse()">PARSE</button>
+        </div>-->
+    </div>
+    <div class="form-group" ng-if="valid()">
+        <label class="col-sm-offset-1 col-sm-5 control-label" style="text-align: left" ng-bind="calculateResult()"></label>
+    </div>
+
+</div>
