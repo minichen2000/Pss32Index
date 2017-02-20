@@ -19,7 +19,7 @@
                 };
                 scope.calculateResult=function(){
                     var numbers=pss32IndexUtil.validatePss32Index(scope.snmpIndex);
-                    return JSON.stringify(pss32IndexUtil.parsePortOrOthIndex(numbers[0]));
+                    return pss32IndexUtil.parseCompleteLegalIndices(numbers);
                 }
             }
         };
