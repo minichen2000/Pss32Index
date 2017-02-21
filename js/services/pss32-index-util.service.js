@@ -28,10 +28,10 @@
         ];
         var CONTAINERTYPE=[
             'NULL',
-            'Line',//'HO-ODU NIM'
+            'Line(HO-ODU NIM)',//'HO-ODU NIM'
             'Client', //'Client Transparent ODU',
-            'Line', //'LO-ODU NIM',
-            'Line', //'ODU-TP',
+            'Line(LO-ODU NIM)', //'LO-ODU NIM',
+            'Line(ODU-TP)', //'ODU-TP',
             'ODU POOL',
             'ODU1PTF', //'ODU1PTF (11dpm12/4qpa8 specific)',
             'OPTSG'

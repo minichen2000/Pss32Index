@@ -1,5 +1,6 @@
 # [Pss32Index](https://github.com/minichen2000/Pss32Index)
-[Pss32Index](https://github.com/minichen2000/Pss32Index) is a tool to test RESTful API. Compare to other RESTful API testers RestClient has a main advantage: the **formatted JSON** data display.
+[Pss32Index](https://github.com/minichen2000/Pss32Index) is a tool to translate ALU PSS32/16/8/4 snmp mib index of Port, OTU and ODUs to a human readable descriptions.
+
 
 # Features
 - GET POST DELETE PUT PATCH
