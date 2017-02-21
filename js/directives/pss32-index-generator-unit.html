@@ -1,0 +1,73 @@
+<div class="form-horizontal" role="form">
+    <div class="form-group">
+        <label class="select-inline cell-margin-right">
+            Shelf
+            <select class="form-control" ng-model="data.shelf"
+                    ng-options="_shelf for _shelf in shelves">
+            </select>
+        </label>
+        <label class="select-inline cell-margin-right">
+            Slot
+            <select class="form-control" ng-model="data.slot"
+                    ng-options="_slot for _slot in slots">
+            </select>
+        </label>
+        <label class="select-inline cell-margin-right">
+            Port
+            <select class="form-control" ng-model="data.port"  ng-disabled="!checkPort()"
+                    ng-options="ports.indexOf(_port) as _port for _port in ports">
+            </select>
+        </label>
+        <label class="select-inline cell-margin-right">
+            Channel
+            <select class="form-control" ng-model="data.channel"  ng-disabled="!checkChannel()"
+                    ng-options="channels.indexOf(_channel) as _channel for _channel in channels">
+            </select>
+        </label>
+        <label class="select-inline cell-margin-right">
+            HO ODU
+            <select class="form-control" ng-model="data.hoOduNumber"  ng-disabled="!checkHoOdu()"
+                    ng-options="hoOduNumbers.indexOf(_hoOduNumber) as _hoOduNumber for _hoOduNumber in hoOduNumbers">
+            </select>
+        </label>
+        <label class="select-inline cell-margin-right">
+            ContainerType
+            <select class="form-control" ng-model="data.containerType"  ng-disabled="!checkContainerType()"
+                    ng-options="containerTypes.indexOf(_containerType) as _containerType for _containerType in containerTypes">
+            </select>
+        </label>
+        <label class="select-inline cell-margin-right">
+            HO ODU Type
+            <select class="form-control" ng-model="data.hoOduType"  ng-disabled="!checkHoOduType()"
+                    ng-options="oduTypes.indexOf(_hoOduType) as  _hoOduType for _hoOduType in oduTypes">
+            </select>
+        </label>
+        <label class="select-inline cell-margin-right">
+            LO ODU Type
+            <select class="form-control" ng-model="data.loOduType"  ng-disabled="!checkLoOduType()"
+                    ng-options="oduTypes.indexOf(_loOduType) as  _loOduType for _loOduType in oduTypes">
+            </select>
+        </label>
+        <label class="select-inline cell-margin-right">
+            LO ODU Number
+            <select class="form-control" ng-model="data.loOduNumber"  ng-disabled="!checkLoOduNumber()"
+                    ng-options="loOduNumbers.indexOf(_loOduNumber) as  _loOduNumber for _loOduNumber in loOduNumbers">
+            </select>
+        </label>
+        <label class="select-inline cell-margin-right">
+            TCM Level
+            <select class="form-control" ng-model="data.tcmLevel"  ng-disabled="!checkTcmLevel()"
+                    ng-options="tcmLevels.indexOf(_tcmLevel) as  _tcmLevel for _tcmLevel in tcmLevels">
+            </select>
+        </label>
+        <label class="select-inline cell-margin-right">
+            TCM Level
+            <select class="form-control" ng-model="data.tcmDirection"  ng-disabled="!checkTcmDirection()"
+                    ng-options="tcmDirections.indexOf(_tcmDirection) as  _tcmDirection for _tcmDirection in tcmDirections">
+            </select>
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-offset-1 col-sm-8 control-label" style="padding-left: 0px; margin-left: 0px;text-align: left;color: #00b3ee;font-size:18px" ng-bind="calculateResult()"></label>
+    </div>
+</div>

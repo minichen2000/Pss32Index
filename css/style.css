@@ -75,3 +75,6 @@ body{
   background-color: #f9f2f4;
   border-radius: 4px;
 }
+.cell-margin-right{
+  margin-right:20px;
+}

@@ -20,25 +20,58 @@
     <script src="js/services/pss32-index-util.service.js?t=1"></script>
     <script src="js/main/main-controller.js?t=1"></script>
     <script src="js/directives/pss32-index-parser-unit.js?t=1"></script>
+    <script src="js/directives/pss32-index-generator-unit.js?t=1"></script>
 </head>
 
 <body ng-app="starter" ng-controller="MainController as vm">
-<div style="width:100%; height:95%;padding: 15px 0px">
-    <div style="position: relative;">
-        <!--<a class="btn btn-warning btn-lg" style="position:absolute;right:50px; top:0px" href="doc.html" target="_blank">
-            <i class="fa fa-question-circle fa-fw"></i>&nbsp;命令帮助
-        </a>-->
-        <pss32-index-parser-unit ng-repeat="c in vm.parserCount"></pss32-index-parser-unit>
-
-        <div class="form-group">
-
-            <a class="col-sm-1" ng-click="vm.onAdd()">
-                <i class="fa fa-plus fa-lg"></i>
-            </a>
+<div class="row" style="margin:0px 0px 0px 10px;padding:0px 0px 0px 10px">
+    <div class="col-sm-5" style="margin:0px;padding:0px">
+        <div class="row">
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-11">
+                <div style="width:100%; height:95%;padding: 35px 5px 15px 5px">
+                    <div style="position: relative;">
+                        <pss32-index-parser-unit ng-repeat="c in vm.parserCount"></pss32-index-parser-unit>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <div class="form-group">
+                    <a ng-click="vm.onAddParser()">
+                        <i class="fa fa-plus fa-lg pull-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-7" style="margin:0px;padding:0px">
+        <div class="row">
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-11">
+                <div style="width:100%; height:95%;padding: 15px 5px 10px 5px">
+                    <div style="position: relative;">
+                        <pss32-index-generator-unit ng-repeat="c in vm.generatorCount"></pss32-index-generator-unit>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <div class="form-group">
+                    <a ng-click="vm.onAddGenerator()">
+                        <i class="fa fa-plus fa-lg pull-right"></i>
+                    </a>
+                </div>
+            </div>
 
+        </div>
     </div>
 </div>
+
 </body>
 </html>

@@ -39,9 +39,38 @@
 
         var service = {
             validatePss32Index: validatePss32Index,
-            parseCompleteLegalIndices: parseCompleteLegalIndices
+            parseCompleteLegalIndices: parseCompleteLegalIndices,
+            generateIndex: generateIndex
         };
         return service;
+
+        function generateIndex(data){
+            var firstPart='';
+            var secondPart='';
+            var rlt=(data.shelf<<24) + (data.slot<<16);
+            if(data.hoOduNumber>0){
+                rlt+=(data.hoOduNumber<<3)
+            }else{
+                rlt+=(data.port<<8);
+                if(data.channel>0){
+                    rlt+=(data.channel<<4)
+                }
+            }
+            firstPart=rlt;
+            if(data.containerType>0 && data.hoOduType>0){
+                secondPart+=((data.tcmLevel<<29) +
+                (data.tcmDirection<<27) +
+                (data.loOduNumber<<16) +
+                (data.containerType<<10) +
+                (data.hoOduType<<5) +
+                data.loOduType);
+            }
+            if(''!=secondPart){
+                return ''+firstPart+'.'+secondPart;
+            }else{
+                return ''+firstPart;
+            }
+        }
 
         function parseCompleteLegalIndices(sections){
             var error_mark="ERROR!";
